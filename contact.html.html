@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ติดต่อเรา | น่าน</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .contact-shell {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 1.25rem;
+        margin: 1rem 0 1.25rem;
+      }
+      .contact-card,
+      .contact-form {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.25rem;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+      }
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.75rem 0 1rem;
+      }
+      .info-list li {
+        padding: 0.65rem 0;
+        border-bottom: 1px solid #eef2f7;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        padding: 0.7rem 1rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+      .form-row {
+        display: grid;
+        gap: 0.45rem;
+        margin-bottom: 0.8rem;
+      }
+      .form-row label {
+        font-weight: 600;
+      }
+      .form-row input,
+      .form-row textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d8e2ea;
+        border-radius: 8px;
+        font: inherit;
+      }
+      .form-row textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      .btn-submit {
+        border: 0;
+        cursor: pointer;
+      }
+      @media (max-width: 760px) {
+        .contact-shell {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>ติดต่อเรา</h1>
+        <p class="tagline">ยินดีรับคำถามและคำแนะนำจากนักท่องเที่ยวทุกท่าน</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <h2>พักผ่อนกับเสน่ห์แห่งเมืองน่าน</h2>
+        <p>
+          จังหวัดน่านมีธรรมชาติที่งดงาม อากาศเย็นสบาย และวัฒนธรรมที่น่าท่องเที่ยว
+          หากคุณมีคำถามเกี่ยวกับการเดินทาง แผนการท่องเที่ยว หรือสถานที่แนะนำ
+          สามารถติดต่อเราได้เลย
+        </p>
+      </section>
+
+      <div class="contact-shell">
+        <section class="contact-card">
+          <h2>ข้อมูลติดต่อ</h2>
+          <ul class="info-list">
+            <li><strong>ที่อยู่:</strong> 123 หมู่ 4 ตำบลในเมือง อำเภอเมืองน่าน จังหวัดน่าน</li>
+            <li><strong>โทรศัพท์:</strong> 054-xxx-xxx</li>
+            <li><strong>อีเมล:</strong> info@nannature.com</li>
+            <li><strong>เวลาเปิดให้บริการ:</strong> จันทร์-ศุกร์ 08:30-17:30 น.</li>
+          </ul>
+          <a class="btn" href="index.html">กลับหน้าแรก</a>
+        </section>
+
+        <section class="contact-form">
+          <h2>ส่งข้อความถึงเรา</h2>
+          <form>
+            <div class="form-row">
+              <label for="name">ชื่อ-นามสกุล</label>
+              <input id="name" type="text" placeholder="กรอกชื่อของคุณ" />
+            </div>
+            <div class="form-row">
+              <label for="email">อีเมล</label>
+              <input id="email" type="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-row">
+              <label for="message">ข้อความ</label>
+              <textarea id="message" placeholder="พิมพ์ข้อความของคุณที่นี่"></textarea>
+            </div>
+            <button class="btn btn-submit" type="submit">ส่งข้อความ</button>
+          </form>
+        </section>
+      </div>
+
+      <section class="map">
+        <h2>แผนที่</h2>
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps?q=%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%99%E0%B8%A7%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%8B%E0%B8%A7%E0%B8%B0%E0%B8%87%E0%B8%87&z=12&output=embed"
+            title="แผนที่จังหวัดน่าน"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 น่านท่องเที่ยว | ทุกสิทธิ์สงวนไว้</div>
+    </footer>
+  </body>
+</html>

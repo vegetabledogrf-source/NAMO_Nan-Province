@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>แนะนำที่พัก น่าน</title>
+  <style>
+    :root {
+      --green-1: #1e6d3b;
+      --green-2: #3c8f55;
+      --green-3: #78c07c;
+      --green-4: #ebf7eb;
+      --text: #233326;
+      --muted: #647063;
+      --shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #f8fdf7 0%, #eef7eb 100%);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .topbar {
+      background: linear-gradient(90deg, var(--green-1) 0%, var(--green-2) 100%);
+      color: white;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+
+    .brand { font-size: 1.2rem; font-weight: 800; }
+    .nav a { margin-left: 16px; font-weight: 600; }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 18px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-card, .info-card, .spot-card, .feature-box, .stay-card {
+      background: white;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card { padding: 30px; }
+    .hero-card h1 {
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      margin: 0 0 12px;
+      color: var(--green-1);
+    }
+    .hero-card p { color: var(--muted); margin: 0 0 16px; }
+
+    .badge {
+      display: inline-block;
+      background: var(--green-4);
+      color: var(--green-1);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      border: none;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--green-2); color: white; }
+    .btn-secondary { background: #f1f8f1; color: var(--text); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .stat-box {
+      text-align: center;
+      padding: 12px;
+      background: #f8fdf8;
+      border-radius: 14px;
+    }
+    .stat-box strong { display: block; color: var(--green-1); }
+
+    .info-card { overflow: hidden; }
+    .hero-image {
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.05)),
+        url('https://ik.imagekit.io/tvlk/blog/2025/06/shutterstock_2422464637.jpg?tr=q-70,c-at_max,w-1000,h-600') center/cover;
+    }
+    .info-body { padding: 18px 20px 20px; }
+    .info-body h3 { margin-top: 0; color: var(--green-1); }
+
+    .section { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .section-head h2 { margin: 0; color: var(--green-1); }
+
+    .spot-grid, .card-grid, .features {
+      display: grid;
+      gap: 18px;
+    }
+    .spot-grid { grid-template-columns: repeat(3, 1fr); }
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+    .features { grid-template-columns: repeat(3, 1fr); }
+
+    .spot-card { padding: 18px; }
+    .spot-card h3 { margin: 0 0 6px; color: var(--green-1); }
+    .spot-card p { margin: 0; color: var(--muted); }
+
+    .stay-card { overflow: hidden; transition: transform 0.2s ease; }
+    .stay-card:hover { transform: translateY(-4px); }
+    .image-area {
+      height: 190px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 16px;
+      color: white;
+      font-weight: 700;
+      background-size: cover;
+      background-position: center;
+    }
+    .image-area.one { background-image: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(0,0,0,0.05)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80'); }
+    .image-area.two { background-image: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(0,0,0,0.05)), url('https://ak-d.tripcdn.com/images/0221m12000kzwdl780856_R_600_400_R5.webp'); }
+    .image-area.three { background-image: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(0,0,0,0.05)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrN8Td91RoKWJgwLm9sWEWKLEz-yfl_gnTjLZM2SUF6CUY02_ZpTV0I3I&s=10'); }
+    .tag {
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.16);
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+    }
+    .card-body { padding: 16px; }
+    .card-body h3 { margin: 0 0 6px; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 8px; }
+    .price { color: var(--green-1); font-weight: 800; }
+
+    .feature-box { padding: 18px; }
+    .feature-box h3 { margin-top: 0; color: var(--green-1); }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      background: #f0f8ef;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .spot-grid, .card-grid, .features { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { flex-direction: column; gap: 8px; }
+      .nav a { margin: 0 8px; }
+      .spot-grid, .card-grid, .features, .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🌿 น่าน GreenStay</div>
+    <nav class="nav">
+      <a href="#home">หน้าแรก</a>
+      <a href="#stay">ที่พัก</a>
+      <a href="#spots">สถานที่เที่ยว</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge">แนะนำที่พักในจังหวัดน่าน</span>
+        <h1>พักผ่อนในเมืองแห่งธรรมชาติและความเงียบงาม</h1>
+        <p>จากวิวภูเขา ทุ่งหญ้า และบรรยากาศชิล ๆ ถึงที่พักที่นุ่มนวลและอบอุ่น เหมาะกับการเที่ยวพักร้อนหรือวันหยุดสุดชิล</p>
+        <div class="btn-row">
+          <button class="btn btn-primary">ดูที่พักยอดนิยม</button>
+          <button class="btn btn-secondary">จองเลย</button>
+        </div>
+        <div class="stats">
+          <div class="stat-box"><strong>4.9/5</strong>รีวิว</div>
+          <div class="stat-box"><strong>24/7</strong>บริการ</div>
+          <div class="stat-box"><strong>100%</strong>ธรรมชาติ</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="hero-image"></div>
+        <div class="info-body">
+          <h3>สำหรับคนชอบความเงียบสงบ</h3>
+          <p>เหมาะกับนักท่องเที่ยวที่อยากสัมผัสอากาศดี ได้ภาพสวย และได้พักผ่อนแบบไม่เร่งรีบ</p>
+          <ul>
+            <li>มีวิวธรรมชาติที่สวยงาม</li>
+            <li>ใกล้จุดถ่ายรูปและสถานที่เที่ยว</li>
+            <li>อาหารเช้าสดและอากาศเย็นสบาย</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="spots">
+      <div class="section-head">
+        <h2>สถานที่เที่ยวในน่าน</h2>
+        <a href="#">ดูเพิ่มเติม</a>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <h3>🏔️ ดอยเสมอดาว</h3>
+          <p>แหล่งชมวิวและดาวสวยงามในยามค่ำคืน</p>
+        </div>
+        <div class="spot-card">
+          <h3>🌿 วัดพระธาตุเขาน้อย</h3>
+          <p>สถานที่ศักดิ์สิทธิ์และทิวทัศน์งดงาม</p>
+        </div>
+        <div class="spot-card">
+          <h3>🛕 ตลาดน่าน</h3>
+          <p>ชิมอาหารท้องถิ่นและสัมผัสบรรยากาศเมือง</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stay">
+      <div class="section-head">
+        <h2>ที่พักแนะนำ</h2>
+        <a href="#">ดูทั้งหมด</a>
+      </div>
+      <div class="card-grid">
+        <article class="stay-card">
+          <div class="image-area one">
+            <span class="tag">วิวภูเขา</span>
+            <span class="tag">⭐ 4.9</span>
+          </div>
+          <div class="card-body">
+            <h3>Hillview Eco Lodge</h3>
+            <div class="meta">น่าน · ห้องสบาย · น้ำพุร้อน</div>
+            <div class="price">1,800 บาท/คืน</div>
+          </div>
+        </article>
+
+        <article class="stay-card">
+          <div class="image-area two">
+            <span class="tag">สวนร่มรื่น</span>
+            <span class="tag">⭐ 4.8</span>
+          </div>
+          <div class="card-body">
+            <h3>Garden Nest House</h3>
+            <div class="meta">รีสอร์ทเงียบ · อาหารเช้า · จอดรถฟรี</div>
+            <div class="price">1,500 บาท/คืน</div>
+          </div>
+        </article>
+
+        <article class="stay-card">
+          <div class="image-area three">
+            <span class="tag">พักครอบครัว</span>
+            <span class="tag">⭐ 5.0</span>
+          </div>
+          <div class="card-body">
+            <h3>Forest Retreat</h3>
+            <div class="meta">ห้องใหญ่ · เลานั่งเล่น · บรรยากาศดี</div>
+            <div class="price">2,200 บาท/คืน</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head">
+        <h2>ทำไมเลือกที่พักเหล่านี้</h2>
+      </div>
+      <div class="features">
+        <div class="feature-box">
+          <h3>🌿 บรรยากาศชื่นใจ</h3>
+          <p>ล้อมรอบด้วยต้นไม้และอากาศบริสุทธิ์ เหมาะกับการพักผ่อนอย่างแท้จริง</p>
+        </div>
+        <div class="feature-box">
+          <h3>🛏️ สบายและอบอุ่น</h3>
+          <p>เฟอร์นิเจอร์เรียบง่าย อบอุ่นและนุ่มนวล เหมือนอยู่บ้าน</p>
+        </div>
+        <div class="feature-box">
+          <h3>💬 รีวิวดีเยี่ยม</h3>
+          <p>คัดสรรจากผู้เข้าพักจริงที่ชื่นชอบธรรมชาติและความเงียบสงบ</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>น่าน GreenStay © 2026 · พักผ่อนในแบบที่คุณรัก</p>
+  </footer>
+</body>
+</html>

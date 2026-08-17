@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>อาหารน่าน</title>
+    <style>
+      :root {
+        --bg: #fffaf2;
+        --card: #ffffff;
+        --primary: #a84f1f;
+        --secondary: #2f6f4f;
+        --text: #2f2f2f;
+        --muted: #6b6b6b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text);
+        background: linear-gradient(135deg, #fff8ed 0%, #fdf2e6 100%);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)),
+          url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover;
+        color: white;
+        padding: 90px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: -35px auto 40px;
+        padding: 0 20px;
+      }
+
+      .intro {
+        background: var(--card);
+        border-radius: 20px;
+        padding: 24px 28px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 24px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin: 0 0 14px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+      }
+
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .card-body {
+        padding: 18px 20px 20px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        color: var(--secondary);
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .highlight {
+        background: #fef1db;
+        color: #7a3f15;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 700px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>อาหารน่านอร่อย เอกลักษณ์พิเศษ</h1>
+      <p>ลิ้มลองความอร่อยของอาหารท้องถิ่นจังหวัดน่านที่มีรสชาติ distinctive และน่าจดจำ</p>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2 class="section-title">ยินดีต้อนรับสู่รสชาติของน่าน</h2>
+        <p>
+          จังหวัดน่านขึ้นชื่อในเรื่องอาหารพื้นบ้านและเครื่องปรุงที่ให้ความเป็นเอกลักษณ์
+          ทำให้ทุกคำที่ลิ้มลองรู้สึกอบอุ่นและน่าจดจำ
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <img src="https://t1.blockdit.com/photos/2023/04/6447f300378c1122d90f43dc_800x0xcover_joYo7Lmz.jpg" alt="อาหารพื้นบ้าน" />
+          <div class="card-body">
+            <span class="highlight">อาหารเด่น</span>
+            <h3>ข้าวซอยน่าน</h3>
+            <p>อาหารที่มีรสชาติกลมกล่อมและหอมเครื่องเทศ เหมาะกับการลิ้มลองในวันเย็น</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdJ8IKsERVVskYVOB0ERUrCfflQl0pS8hymqdwYaXujnLAfbbodhF9OVpr&s=10" alt="อาหารไทย" />
+          <div class="card-body">
+            <span class="highlight">อาหารเด่น</span>
+            <h3>หมี่สับและลาบน่าน</h3>
+            <p>ความอร่อยจากเนื้อสัตว์และเครื่องเคียงที่มีความเข้มข้นของรสชาติท้องถิ่น</p>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <footer>
+      สร้างขึ้นเพื่อแนะนำความอร่อยและความงามของจังหวัดน่านให้ทุกคนได้รู้จัก
+    </footer>
+  </body>
+</html>
