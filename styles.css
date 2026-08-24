@@ -48,6 +48,25 @@ body {
   font-size: 1.05rem;
 }
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #2e7d32;
+}
+
+.navbar a {
+  padding: 12px 18px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+  background: #1b5e20;
+  outline: none;
+}
+
 main.container {
   padding: 28px 0 52px;
 }
@@ -159,6 +178,11 @@ section h2 {
 
   .site-header {
     padding: 36px 0 32px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
   }
 
   .grid {

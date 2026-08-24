@@ -30,7 +30,7 @@
       }
       .btn {
         display: inline-block;
-        background: var(--accent);
+        background: #2e7d32;
         color: #fff;
         text-decoration: none;
         padding: 0.7rem 1rem;
@@ -61,6 +61,10 @@
         border: 0;
         cursor: pointer;
       }
+      .btn:hover,
+      .btn:focus-visible {
+        background: #1b5e20;
+      }
       @media (max-width: 760px) {
         .contact-shell {
           grid-template-columns: 1fr;
@@ -75,6 +79,14 @@
         <p class="tagline">ยินดีรับคำถามและคำแนะนำจากนักท่องเที่ยวทุกท่าน</p>
       </div>
     </header>
+
+    <nav class="navbar" aria-label="เมนูหลัก">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="teepak.html.html">แนะนำที่พัก</a>
+      <a href="food.html.html">อาหาร</a>
+      <a href="travel.html.html">สถานที่ท่องเที่ยว</a>
+      <a href="contact.html.html" aria-current="page">ติดต่อเรา</a>
+    </nav>
 
     <main class="container">
       <section class="intro">
@@ -122,7 +134,7 @@
         <h2>แผนที่</h2>
         <div class="map-wrapper">
           <iframe
-            src="https://www.google.com/maps?q=%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%99%E0%B8%A7%E0%B8%A7%E0%B8%87%E0%B8%99%E0%B8%8B%E0%B8%A7%E0%B8%B0%E0%B8%87%E0%B8%87&z=12&output=embed"
+            src="https://www.google.com/maps?q=Nan,Thailand&z=12&output=embed"
             title="แผนที่จังหวัดน่าน"
             allowfullscreen
             loading="lazy"

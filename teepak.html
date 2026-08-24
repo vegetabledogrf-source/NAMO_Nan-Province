@@ -75,11 +75,14 @@
 
     .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
+      display: inline-block;
       border: none;
       padding: 12px 16px;
       border-radius: 999px;
       font-weight: 700;
       cursor: pointer;
+      font: inherit;
+      text-align: center;
     }
     .btn-primary { background: var(--green-2); color: white; }
     .btn-secondary { background: #f1f8f1; color: var(--text); }
@@ -196,8 +199,8 @@
         <h1>พักผ่อนในเมืองแห่งธรรมชาติและความเงียบงาม</h1>
         <p>จากวิวภูเขา ทุ่งหญ้า และบรรยากาศชิล ๆ ถึงที่พักที่นุ่มนวลและอบอุ่น เหมาะกับการเที่ยวพักร้อนหรือวันหยุดสุดชิล</p>
         <div class="btn-row">
-          <button class="btn btn-primary">ดูที่พักยอดนิยม</button>
-          <button class="btn btn-secondary">จองเลย</button>
+          <a class="btn btn-primary" href="#stay">ดูที่พักยอดนิยม</a>
+          <a class="btn btn-secondary" href="contact.html.html">จองเลย</a>
         </div>
         <div class="stats">
           <div class="stat-box"><strong>4.9/5</strong>รีวิว</div>
@@ -223,7 +226,7 @@
     <section class="section" id="spots">
       <div class="section-head">
         <h2>สถานที่เที่ยวในน่าน</h2>
-        <a href="#">ดูเพิ่มเติม</a>
+        <a href="travel.html.html">ดูเพิ่มเติม</a>
       </div>
       <div class="spot-grid">
         <div class="spot-card">
@@ -244,7 +247,7 @@
     <section class="section" id="stay">
       <div class="section-head">
         <h2>ที่พักแนะนำ</h2>
-        <a href="#">ดูทั้งหมด</a>
+        <a href="#stay">ดูทั้งหมด</a>
       </div>
       <div class="card-grid">
         <article class="stay-card">
