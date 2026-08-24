@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --forest: #195c52;
+  --leaf: #2f8f72;
+  --mist: #f3f7f4;
+  --ink: #19312d;
+  --muted: #5e716c;
+  --line: #d9e6e0;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--mist);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 48px 0 42px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--forest), var(--leaf));
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.tagline {
+  max-width: 600px;
+  margin: 14px 0 0;
+  color: #e5f4ed;
+  font-size: 1.05rem;
+}
+
+main.container {
+  padding: 28px 0 52px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+section h2 {
+  margin: 0 0 14px;
+  color: var(--forest);
+  font-size: 1.65rem;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.intro,
+.map,
+.travel-tips {
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.intro p,
+.map-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card h3,
+.card p {
+  margin-right: 18px;
+  margin-left: 18px;
+}
+
+.card h3 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: var(--forest);
+}
+
+.card p {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.map-wrapper {
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.travel-tips ul {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 24px 0;
+  color: #e5f4ed;
+  background: var(--forest);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 24px, 560px);
+  }
+
+  .site-header {
+    padding: 36px 0 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  .map-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+}
