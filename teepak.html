@@ -37,7 +37,22 @@
     }
 
     .brand { font-size: 1.2rem; font-weight: 800; }
-    .nav a { margin-left: 16px; font-weight: 600; }
+    .nav a {
+      display: inline-block;
+      margin-left: 16px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .nav a:hover,
+    .nav a:focus-visible,
+    .nav a[aria-current="page"] {
+      background: rgba(255, 255, 255, 0.18);
+    }
+    .nav a:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 2px;
+    }
 
     .hero {
       max-width: 1200px;
@@ -139,6 +154,8 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
       padding: 16px;
       color: white;
       font-weight: 700;
@@ -184,11 +201,13 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">🌿 น่าน GreenStay</div>
-    <nav class="nav">
-      <a href="#home">หน้าแรก</a>
-      <a href="#stay">ที่พัก</a>
-      <a href="#spots">สถานที่เที่ยว</a>
+    <a class="brand" href="index.html">🌿 น่าน GreenStay</a>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">หน้าหลัก</a>
+      <a href="teepak.html" aria-current="page">แนะนำที่พัก</a>
+      <a href="food.html">อาหาร</a>
+      <a href="travel.html">สถานที่ท่องเที่ยว</a>
+      <a href="contact.html">ติดต่อเรา</a>
     </nav>
   </header>
 
@@ -226,7 +245,7 @@
     <section class="section" id="spots">
       <div class="section-head">
         <h2>สถานที่เที่ยวในน่าน</h2>
-        <a href="travel.htm">ดูเพิ่มเติม</a>
+        <a href="travel.html">ดูเพิ่มเติม</a>
       </div>
       <div class="spot-grid">
         <div class="spot-card">
@@ -247,7 +266,7 @@
     <section class="section" id="stay">
       <div class="section-head">
         <h2>ที่พักแนะนำ</h2>
-        <a href="#stay">ดูทั้งหมด</a>
+        <a href="contact.html">สอบถามที่พัก</a>
       </div>
       <div class="card-grid">
         <article class="stay-card">

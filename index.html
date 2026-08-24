@@ -2,7 +2,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>เที่ยวจังหวัดน่าน</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -95,6 +95,17 @@ footer {
   .zoom-img:hover {
     transform: scale(1.08);
   }
+
+  .featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .featured-item {
+    flex: 1 1 200px;
+    min-width: 0;
+  }
 </style>
 </head>
 <body>
@@ -124,7 +135,7 @@ window.onclick = function(event) {
   <a href="index.html" aria-current="page">หน้าหลัก</a>
   <a href="teepak.html">แนะนำที่พัก</a>
   <a href="food.html">อาหาร</a>
-  <a href="travel.html">สถานที่ท่องเที่ย</a>
+  <a href="travel.html">สถานที่ท่องเที่ยว</a>
   <a href="contact.html">ติดต่อเรา</a>
 </div>
 
@@ -156,24 +167,24 @@ window.onclick = function(event) {
   <div class="main">
     <h2><center>รวมที่ท่องเที่ยว น่าน</center><br></h2>
 
-   <div style="display: flex; justify-content: center; gap: 15px; align-items: flex-start; font-family: sans-serif; width: 100%;">
+  <div class="featured-grid" style="justify-content: center; align-items: flex-start; font-family: sans-serif; width: 100%;">
     
-    <div style="width: 23%; min-width: 200px; display: flex; flex-direction: column;">
+    <div class="featured-item" style="display: flex; flex-direction: column;">
         <p style="margin: 0 0 8px 0; font-weight: bold; font-size: 14px;">กาแฟบ้านไทลื้อ อ.ปัว</p>
         <img src="https://chillpainai.com/src/wewakeup/scoop/img_scoop/ben_study_2016/2017/Feb/checkin_nan/baantailue/_MG_4483.jpg" alt="น่าน" style="width: 100%; height: auto; display: block;" class="zoom-img" >
     </div>
 
-    <div style="width: 23%; min-width: 200px; display: flex; flex-direction: column;">
+    <div class="featured-item" style="display: flex; flex-direction: column;">
         <p style="margin: 0 0 8px 0; font-weight: bold; font-size: 14px;"> ซุ้มลีลาวดี ณ พิพิธภัณฑสถานแห่งชาติ</p>
         <img src="https://chillpainai.com/src/wewakeup/scoop/img_scoop/ben_study_2016/2017/Feb/checkin_nan/leelawdee/_MG_5675.jpg" alt="น่าน" style="width: 100%; height: auto; display: block;" class="zoom-img">
     </div>
 
-     <div style="width: 23%; min-width: 200px; display: flex; flex-direction: column;">
+    <div class="featured-item" style="display: flex; flex-direction: column;">
         <p style="margin: 0 0 8px 0; font-weight: bold; font-size: 14px;">ดอยเสมอดาว ดูดาวเสมอดอยที่ดอยเสมอดาว</p>
         <img src="https://chillpainai.com/src/wewakeup/scoop/img_scoop/ben_study_2016/2017/Feb/checkin_nan/doisamerdao/_MG_6126.jpg" alt="น่าน" style="width: 100%; height: auto; display: block;" class="zoom-img">
     </div>
 
-    <div style="width: 23%; min-width: 200px; display: flex; flex-direction: column;">
+    <div class="featured-item" style="display: flex; flex-direction: column;">
         <p style="margin: 0 0 8px 0; font-weight: bold; font-size: 14px;">อ.บ่อเกลือ</p>
         <img src="https://chillpainai.com/src/wewakeup/scoop/img_scoop/ben_study_2016/2017/Feb/checkin_nan/boklua/IMG_7403.jpg" alt="น่าน" style="width: 100%; height: auto; display: block;" class="zoom-img">
     </div>
@@ -181,7 +192,7 @@ window.onclick = function(event) {
     <br>
     <h2>บรรยากาศ</h2>
     <h5></h5>
-    <img src="c:\Users\PC\Pictures\Screenshots\Screenshot 2026-07-06 110158.png" alt="Photo of me" style="width: 100%; height: auto; display: block; border-radius: 4px;">
+    <img src="https://ik.imagekit.io/tvlk/blog/2025/07/Desktop.jpg?tr=q-70,c-at_max,w-1200,h-600" alt="ภูมิทัศน์จังหวัดน่าน" style="width: 100%; height: auto; display: block; border-radius: 4px;">
     <p></p>
     <p>จังหวัดน่านตั้งอยู่ในพื้นที่ห่างไกลและเงียบสงบทางตอนเหนือของประเทศไทย เป็นแหล่งอัญมณีทางธรรมชาติที่รอคอยให้นักเดินทางมาค้นพบ แสวงหาประสบการณ์ใช้ชีวิตแบบสโลวไลฟ์ จังหวัดน่านมีมรดกทางวัฒนธรรมอันมั่งคั่ง ภูมิทัศน์ธรรมชาติอันน่าทึ่ง และบรรยากาศอันเงียบสงบ</p>
 </div>

@@ -62,12 +62,20 @@
       .navbar a:hover,
       .navbar a:focus-visible {
         background: var(--primary);
-        outline: none;
+      }
+
+      .navbar a[aria-current="page"] {
+        background: var(--primary);
+      }
+
+      .navbar a:focus-visible {
+        outline: 3px solid #ffe2b8;
+        outline-offset: -3px;
       }
 
       main {
         max-width: 1100px;
-        margin: -35px auto 40px;
+        margin: 24px auto 40px;
         padding: 0 20px;
       }
 
@@ -96,6 +104,8 @@
         border-radius: 18px;
         overflow: hidden;
         box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
       }
 
       .card img {
@@ -107,6 +117,7 @@
 
       .card-body {
         padding: 18px 20px 20px;
+        flex: 1;
       }
 
       .card h3 {
